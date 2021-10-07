@@ -24,6 +24,10 @@ public class LinearParams implements Params {
         DEFAULT_MARGE_TOP = mContext.getResources().getDisplayMetrics().heightPixels/80;
         DEFAULT_MARGE_BOTTOM = mContext.getResources().getDisplayMetrics().heightPixels/80;
     }
+
+
+
+
     public LinearParams(Context mContext, List<EditText> editTexts) {
         this.editTexts = editTexts;
         DEFAULT_HEIGHT = mContext.getResources().getDisplayMetrics().heightPixels/20;

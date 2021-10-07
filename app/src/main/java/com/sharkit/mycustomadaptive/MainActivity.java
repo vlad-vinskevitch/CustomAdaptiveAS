@@ -4,13 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.EditText;
+import android.widget.TextView;
 
-import com.sharkit.mycustomadaptive.layout.linear_params.LinearParams;
-import com.sharkit.mycustomadaptive.layout.relative_params.RelativeParams;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import com.sharkit.mycustomadaptive.layout.adaptive.linear.Linear;
+import com.sharkit.mycustomadaptive.layout.adaptive.linear.LinearParams;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         EditText editText = findViewById(R.id.editText);
         EditText editText1 = findViewById(R.id.editText1);
 
@@ -26,9 +25,16 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+//
+//        List<EditText> editTexts = Arrays.asList(editText,editText1);
+//        new LinearParams(this, editTexts).setParams(-1,-1);
 
-        List<EditText> editTexts = Arrays.asList(editText,editText1);
-        new LinearParams(this, editTexts).setParams();
+        Linear LInear = new LinearParams(editText)
+                .setParams()
+                .setMarge()
+                .build();
+
+
 
 
 
